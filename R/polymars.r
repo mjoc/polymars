@@ -1062,7 +1062,7 @@ summary.polymars<-function(mars.model)
 }
 
 
-plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=F,contour.ploymars=F,xlim,ylim,main,intercept,...)
+plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=F,contour.polymars=F,xlim,ylim,main,intercept,...)
 {
  # mars.model      a polymars object
  # predictor1      the column number in the original predictor matrix of the predictor of interest
@@ -1077,7 +1077,7 @@ plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=
  #                 the a n*n mesh is interploted over. Default 2-d: 100, 3-d 33.
  # xyz             sometimes a call can be ambiguous: plot(pmars1,6,2) a 2-d plot with 2nd response 
  #                 or a 3-d plot. Use xyz=T for 3-d.
- #contour.ploymars By default a 3-d if a `persp' plot. contour.ploymars=T asks for a `contour' plot.
+ #contour.polymars By default a 3-d if a `persp' plot. contour.polymars=T asks for a `contour' plot.
  #intercept        same as for predict function. =T intercepr is included =F it is left out, or can
  #                 be given a numerical value.
 
@@ -1101,7 +1101,7 @@ plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=
    response<-1
    
   } 
- if(contour.ploymars == T)
+ if(contour.polymars == T)
   {
    xyz<-T
   }
@@ -1126,7 +1126,7 @@ plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=
                   predictor2,
                   n=n,
                   
-                  contour.ploymars=contour.ploymars,
+                  contour.polymars=contour.polymars,
                   intercept=intercept,
                   ...)
        
@@ -1140,7 +1140,7 @@ plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=
                   n=n,
                   xlim=xlim,
                   
-                  contour.ploymars=contour.ploymars,
+                  contour.polymars=contour.polymars,
                   intercept=intercept,
                   ...)
       }
@@ -1156,7 +1156,7 @@ plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=
                   response,
                   n=n,
                   
-                  contour.ploymars=contour.ploymars,
+                  contour.polymars=contour.polymars,
                   intercept=intercept,
                   ...)
       }
@@ -1168,7 +1168,7 @@ plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=
                  response,
                  n=n,
                  xlim=xlim,
-                 contour.ploymars=contour.ploymars,
+                 contour.polymars=contour.polymars,
                  intercept=intercept,
                  ...)
       }
@@ -1319,7 +1319,7 @@ plot.polymars<-function(mars.model,predictor1,response,predictor2,x,add=F,n,xyz=
 
 
 ################################################################################################
-polymars.persp<-function(mars.model, predictor1, predictor2, response, n= 33,xlim,ylim,x,contour.ploymars,main,intercept,...)
+polymars.persp<-function(mars.model, predictor1, predictor2, response, n= 33,xlim,ylim,x,contour.polymars,main,intercept,...)
 {
  # used by the plot.polymars function
  # not designed for stand alone use.
@@ -1376,22 +1376,22 @@ polymars.persp<-function(mars.model, predictor1, predictor2, response, n= 33,xli
  if(mars.model$responses > 1) 
   {
  
-   if(missing(main) && (!contour.ploymars))
+   if(missing(main) && (!contour.polymars))
     {
      ztitle <- paste("Response", response)
     }
      
-   if(missing(main) && (contour.ploymars))
+   if(missing(main) && (contour.polymars))
      {
       ztitle <- paste("Contour of response",response)
      }
   }
  else
   {
-   if(missing(main) && (!contour.ploymars))ztitle <- "Response"
-   if(missing(main) && contour.ploymars)ztitle <- paste("Contour of response")
+   if(missing(main) && (!contour.polymars))ztitle <- "Response"
+   if(missing(main) && contour.polymars)ztitle <- paste("Contour of response")
   }
- if(!contour.ploymars)
+ if(!contour.polymars)
   {
    image(X, y, Z, xlab = xtitle, ylab= ytitle, zlab = ztitle)
   }
