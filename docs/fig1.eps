@@ -1,0 +1,4457 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: (S-PLUS Graphics)
+%%Creator: S-PLUS
+%%For: (& O'Connor)
+%%CreationDate: Tue May  6 15:38:29 1997
+%%BoundingBox:  20 270 592 522
+%%Pages: (atend)
+%%DocumentData: Clean7Bit
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+150 dict begin gsave
+/bd{bind def}def
+/PVer 3200 def
+% drawing commands
+/I{Coord SetPage 1 setlinecap 1 setlinejoin
+    LineTypes{RastersPerPoint ScaleArray}forall
+    /Helvetica findfont
+    PointSize RastersPerPoint mul Cex mul scalefont setfont
+    /Colors GColors def
+}bd
+/BWOp{
+    bw{currentrgbcolor add add 2.9 gt{1}{0}ifelse setgray}if
+    exec
+    bw{CurSc Sc}if
+}bd
+/IBu{}def
+/B{newpath}bd
+/E{{stroke}BWOp}bd
+/C{currentpoint Penup{newpath}{E}ifelse moveto}bd
+/F{closepath eofill}bd
+/M{moveto}bd
+/L{lineto}bd
+/Pu{load /XEQ exch def /Penup true def}bd
+/Pd{/XEQ{}def /Penup false def}bd
+/Px{currentdict /XEQ known{XEQ}if}bd
+/h{Penup{rmoveto Px}{rlineto}ifelse}bd
+/j{neg Penup{rmoveto Px}{rlineto}ifelse}bd
+/k{exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/l{neg exch neg exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/m{moveto Penup{Px}if}bd
+/x{0 Penup{rmoveto Px}{rlineto}ifelse}bd
+/y{0 exch Penup{rmoveto Px}{rlineto}ifelse}bd
+/w{neg x}bd
+/z{neg y}bd
+/a{B M dup y exch x neg y closepath}bd
+/b{a eofill}bd
+/c{a E}bd
+/A{PageBegin BackCol 0 ge
+    {CurSc gsave 0 SC Page aload pop
+    exch 4 -1 roll dup 5 1 roll sub 3 1 roll exch dup 4 1 roll sub 4 2 roll b
+    grestore SC}if
+}bd
+/Ph{gsave Pch-x Pch-y rmoveto Show grestore}bd
+/Pc{Pch Ph}bd
+/T{/Adjust exch def gsave translate StringRot rotate 0 0 moveto
+    dup stringwidth pop neg Adjust mul 0 rmoveto
+    currentpoint translate TextShow grestore}bd
+/X{erasepage InPage{PageEnd}if}bd
+/Z{gsave showpage grestore PageEnd}bd
+/W{grestore end}bd
+% parameter setting commands
+/saveAt{Attr begin
+    /Atlinewidth currentlinewidth def
+    /Atfont currentfont def
+    /Atdash currentdash 2 array astore def
+    /AtSc CurSc def
+end}bd
+/restAt{Attr begin
+    Atlinewidth Atfont Atdash AtSc
+    end
+    SC aload pop setdash setfont setlinewidth
+}bd
+/SC{dup dup 0 eq
+    {pop BackIdx
+        {BackCol dup 0 lt {pop 1 setgray} {Sc}ifelse}
+        {/Colors BColor def 1 Sc}ifelse}
+    {/Colors GColors def Sc}ifelse
+    /CurSc exch def
+}bd
+/St{1 sub LineTypes dup 3 1 roll length Rem floor get 0 setdash}bd
+/Sw{abs 2 div RastersPerPoint mul setlinewidth SetClip}bd
+/Sp{dup 42 eq{pop IBu}{Pch exch 0 exch put SetPchSize}ifelse}bd
+/Sx{dup Cex div /Ratio exch def
+     /Cex exch def
+     currentfont Ratio scalefont setfont
+     /Pch-x Pch-x Ratio mul def
+     /Pch-y Pch-y Ratio mul def
+     /Text-y Text-y Ratio mul def}bd
+/So{4 1 roll exch 4 -1 roll Plot astore pop SetClip}bd
+/Sg{4 1 roll exch 4 -1 roll Figure astore pop SetClip}bd
+/Sr{/StringRot exch def}bd
+/Sh{/CharRot exch def}bd
+/Sd{0 eq /ClipToPlot exch def SetClip}bd
+/Iv{/InPage false def/Clip 4 array def/Page 4 array def
+    /Figure [0 0 1 1] def/Plot [0 0 1 1] def/ClipToPlot true def
+    /Cex 1 def/Outline false def
+    /Pch 1 string def/Pch-x 0 def/Pch-y 0 def/Text-y 0 def
+    /LineTypes [ % in default units
+        [] [1 2] [4 4] [8 4] [13 3] [16 2 2 2] [8 2 2 2] [1 13] [6 5] [12 4]
+    ] def
+    /Attr 5 dict def/CurSc 1 def/Penup false def/XEQ{}def
+}bd
+/Rem{2 copy div floor mul sub floor cvi}bd
+/RastersPerPoint{RastersPerInch 72 div}bd
+/ScaleArray{/Factor exch def /Array exch def
+    0 1 Array length 1 sub
+    {dup Array exch get Factor mul Array 3 1 roll put}for}bd
+/Coord{Region aload pop /uy exch def /ux exch def /ly exch def /lx exch def
+    uy ly sub ux lx sub Landscape{exch}if /Width exch def /Height exch def
+    lx ly translate Landscape{90 rotate 0 Height neg translate}if
+    1 RastersPerPoint div dup scale}bd
+/SetPchSize{gsave
+    newpath 0 0 moveto Pch false charpath flattenpath pathbbox
+    exch 3 1 roll
+    add 2 div neg /Pch-y exch def
+    add 2 div neg /Pch-x exch def
+    grestore}bd
+/Show{Outline{false charpath E}{{show}BWOp}ifelse}bd
+/SimpleShow{0 Text-y 2 div neg rmoveto Show}bd
+/FancyShow{
+    /RotDiff exch def
+    /Cos RotDiff cos abs def
+    /Sin RotDiff sin abs def
+    {
+        ( ) dup 0 4 -1 roll put
+        dup stringwidth pop /CharWidth exch def
+        Cos 0 eq{
+            Text-y Sin div
+        }{
+            Sin 0 eq{
+                CharWidth Cos div
+            }{
+                Text-y Sin div dup
+                CharWidth Cos div dup
+                4 1 roll lt{exch pop}{pop}ifelse
+            }ifelse
+        }ifelse 2 div /CharDist exch def
+        CharDist 0 translate 0 0 moveto
+        gsave
+            RotDiff rotate
+            CharWidth 2 div neg Text-y 2 div neg rmoveto
+            Show
+        grestore
+        CharDist 0 translate 0 0 moveto
+    }forall
+}bd
+/TextShow{
+    CharRot StringRot sub dup 0 eq{pop SimpleShow}{FancyShow}ifelse
+}bd
+/BoxClip{/CLW currentlinewidth def
+    2{CLW add 4 1 roll}repeat
+    2{CLW sub 4 1 roll}repeat
+    % initclip
+    saveAt grestore gsave restAt
+    newpath 2 index exch 2 index exch dup 6 index exch
+    moveto 3{lineto}repeat closepath clip newpath}bd
+/Subregion{
+    7 dict begin/A exch def/Uy exch def/Ux exch def/Ly exch def/Lx exch def
+    Ux Lx sub A 0 get mul Lx add
+    Uy Ly sub A 1 get mul Ly add
+    Ux Lx sub A 2 get mul Lx add
+    Uy Ly sub A 3 get mul Ly add end}bd
+/SetFigure{Page aload pop Figure Subregion}bd
+/SetPlot{SetFigure Plot Subregion}bd
+/SetClip{ClipToPlot{SetPlot}{SetFigure}ifelse BoxClip}bd
+/SetPage{0 0 Width Height Page astore RastersPerPoint ScaleArray}bd
+/PageBegin{save /PageContext exch def /InPage true def gsave}bd
+/PageEnd{grestore PageContext restore /InPage false def}bd
+/SImage{
+    dup /Bits exch def 8 exch idiv /PerByte exch def
+    /Ht exch def /Wid exch def
+    1 Wid div 1 Ht div scale
+    /saveSc CurSc def /Colors IColors def
+    /curstr Wid PerByte add 1 sub PerByte idiv string def
+    /MaskByte 16#ff Bits 8 sub bitshift def
+    1 1 Ht{
+        currentfile curstr readhexstring pop pop
+        /CurPos 0 def
+        /Left PerByte def
+        1 1 Wid{
+            Left PerByte eq{
+                /CurByte curstr CurPos get def
+                /MaskMove -8 Bits add def
+                /CurPos CurPos 1 add def
+            }if
+            CurByte MaskMove bitshift MaskByte and
+            dup 0 gt{
+                Sc
+                exch dup 3 1 roll B M 1 z 1 w 1 y F
+            }{pop pop}ifelse
+            Left 1 sub dup /Left exch def 0 le
+            {/Left PerByte def}
+            {/MaskMove MaskMove Bits add def}ifelse
+        }for
+        pop
+    }for
+    /Colors GColors def saveSc Sc
+}bd
+/Ic {} bd
+/Sc {
+    dup dup 1 lt exch 0 ge and
+    {1 exch sub setgray}  % explicit gray level [0,1)
+    {1 sub Colors dup 3 1 roll length Rem floor get
+     dup type /arraytype eq {aload pop setrgbcolor} {setgray} ifelse
+    } ifelse
+} bd
+/If {} bd
+/Sf {dup 0 lt /Outline exch def abs
+     1 sub Fonts dup 3 1 roll length Rem floor get
+     findfont PointSize Cex mul RastersPerPoint mul scalefont dup setfont
+     dup /FontMatrix get /Matrix exch def /FontBBox get aload pop
+     Matrix transform 4 2 roll Matrix transform
+     exch pop add /Text-y exch def pop SetPchSize} bd
+%%EndProlog
+%%BeginSetup
+% fixed controlling parameters
+/Landscape false def
+/Region [20.88 170.755 591.12 621.245] def
+/bw statusdict begin /processcolors where
+{pop processcolors} {1} ifelse end 1 eq
+ def
+/RastersPerInch 300 def
+/PointSize 14 def
+/Fonts [
+	/Helvetica
+	/Courier
+	/Times-Roman
+	/Helvetica-Oblique
+	/Helvetica-Bold
+	/Helvetica-BoldOblique
+	/Courier-Oblique
+	/Courier-Bold
+	/Courier-BoldOblique
+	/Times-Italic
+	/Times-Bold
+	/Times-BoldItalic
+	/Symbol
+	/AvantGarde-Book
+	/AvantGarde-BookOblique
+	/AvantGarde-Demi
+	/AvantGarde-DemiOblique
+	/Bookman-Demi
+	/Bookman-DemiItalic
+	/Bookman-Light
+	/Bookman-LightItalic
+	/Helvetica-Narrow
+	/Helvetica-Narrow-Bold
+	/Helvetica-Narrow-BoldOblique
+	/Helvetica-Narrow-Oblique
+	/NewCenturySchlbk-Roman
+	/NewCenturySchlbk-Bold
+	/NewCenturySchlbk-Italic
+	/NewCenturySchlbk-BoldItalic
+	/Palatino-Roman
+	/Palatino-Bold
+	/Palatino-Italic
+	/Palatino-BoldItalic
+	/ZapfChancery-MediumItalic
+	/ZapfDingbats
+] def
+/GColors [
+	0
+	0.6
+	0.3
+	0.9
+	0.4
+	0.7
+	0.1
+	0.5
+	0.8
+	0.2
+] def
+/BackIdx true def
+/BackCol -1 def
+/IColors [
+	0.933333
+	0.866667
+	0.8
+	0.733333
+	0.666667
+	0.6
+	0.533333
+	0.466667
+	0.4
+	0.333333
+	0.266667
+	0.2
+	0.133333
+	0.0666667
+	0
+] def
+/Colors GColors def
+/IBu {Pch 0 8#267 put SetPchSize} def
+/Bu {Pc} def
+
+% all initialization action here
+Iv I
+currentdict /Ic known {Ic} if
+currentdict /If known {If} if
+
+
+%%EndSetup
+
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+A
+1 St
+1 Sw
+1 SC
+0 Sr
+42 Sp
+1 Sx
+0.123 0.937 0.0968354 0.922152 So
+0 0.5 0 1 Sg
+0 Sh
+1 Sd
+%%IncludeResource: font Helvetica
+1 Sf
+544 656 m
+13 9 k
+530 665 m
+13 10 k
+516 675 m
+13 8 k
+502 683 m
+13 9 k
+488 692 m
+12 10 k
+475 702 m
+12 8 k
+462 710 m
+12 10 k
+449 720 m
+13 8 k
+435 728 m
+11 9 k
+423 737 m
+12 9 k
+410 746 m
+11 9 k
+398 755 m
+13 8 k
+384 763 m
+11 9 k
+372 772 m
+11 8 k
+360 780 m
+12 9 k
+347 789 m
+11 8 k
+335 797 m
+11 8 k
+323 805 m
+11 9 k
+311 814 m
+11 7 k
+299 821 m
+11 9 k
+E
+287 830 m
+10 7 k
+276 837 m
+11 8 k
+264 845 m
+10 8 k
+253 853 m
+10 8 k
+242 861 m
+11 7 k
+230 868 m
+10 8 k
+219 876 m
+10 8 k
+208 884 m
+11 7 k
+196 891 m
+9 8 k
+186 899 m
+11 7 k
+174 906 m
+9 7 k
+164 913 m
+10 7 k
+545 656 m
+19 6 h
+565 662 m
+18 8 h
+584 670 m
+18 6 h
+603 676 m
+18 7 h
+622 683 m
+18 8 h
+641 691 m
+17 6 h
+18 7 h
+677 704 m
+18 6 h
+E
+696 710 m
+17 7 h
+714 717 m
+17 7 h
+732 724 m
+17 6 h
+750 730 m
+17 7 h
+768 737 m
+17 7 h
+786 744 m
+17 6 h
+804 750 m
+16 7 h
+821 757 m
+17 6 h
+839 763 m
+16 7 h
+856 770 m
+16 6 h
+873 776 m
+16 6 h
+890 782 m
+16 7 h
+907 789 m
+16 6 h
+924 795 m
+16 6 h
+941 801 m
+16 6 h
+958 807 m
+15 7 h
+974 814 m
+15 5 h
+990 819 m
+16 6 h
+1007 825 m
+15 6 h
+1023 831 m
+15 6 h
+E
+1039 837 m
+16 6 h
+16 6 h
+1072 849 m
+15 6 h
+1088 855 m
+15 6 h
+550 673 m
+18 8 l
+551 673 m
+12 10 j
+536 683 m
+18 8 l
+537 683 m
+12 9 j
+569 680 m
+17 6 l
+570 680 m
+12 9 j
+522 692 m
+18 8 l
+523 692 m
+12 8 j
+554 692 m
+17 8 l
+555 692 m
+13 11 j
+588 688 m
+17 7 l
+589 688 m
+12 11 j
+508 703 m
+18 10 l
+509 703 m
+12 10 j
+541 702 m
+18 9 l
+542 702 m
+12 10 j
+E
+573 700 m
+17 8 l
+574 700 m
+13 11 j
+606 696 m
+17 7 l
+607 696 m
+13 12 j
+495 712 m
+18 9 l
+496 712 m
+11 8 j
+527 713 m
+18 9 l
+528 713 m
+12 10 j
+560 711 m
+18 8 l
+561 711 m
+11 10 j
+592 709 m
+17 8 l
+593 709 m
+13 12 j
+625 704 m
+17 7 l
+626 704 m
+13 12 j
+482 723 m
+18 12 l
+483 723 m
+11 10 j
+514 724 m
+18 11 l
+515 724 m
+11 10 j
+546 723 m
+18 9 l
+547 723 m
+12 11 j
+E
+579 721 m
+18 9 l
+580 721 m
+11 12 j
+611 717 m
+17 8 l
+612 717 m
+12 12 j
+644 711 m
+17 6 l
+645 709 m
+12 11 j
+468 732 m
+17 11 l
+469 732 m
+12 8 j
+501 734 m
+18 10 l
+502 734 m
+11 9 j
+533 734 m
+18 9 l
+534 734 m
+11 10 j
+565 733 m
+18 9 l
+566 733 m
+12 11 j
+597 730 m
+17 8 l
+598 730 m
+12 12 j
+630 726 m
+17 8 l
+631 726 m
+12 13 j
+662 719 m
+17 8 l
+663 717 m
+12 12 j
+E
+455 742 m
+18 13 l
+456 742 m
+12 9 j
+487 744 m
+18 11 l
+488 744 m
+12 9 j
+520 745 m
+18 10 l
+520 745 m
+12 10 j
+552 745 m
+18 10 l
+553 745 m
+11 11 j
+584 743 m
+18 9 l
+585 743 m
+11 12 j
+616 739 m
+17 8 l
+617 739 m
+12 12 j
+648 733 m
+16 6 l
+649 733 m
+12 12 j
+681 727 m
+18 8 l
+682 725 m
+12 14 j
+442 751 m
+17 13 l
+443 751 m
+11 8 j
+474 755 m
+18 12 l
+475 755 m
+11 10 j
+E
+506 757 m
+18 12 l
+507 757 m
+12 11 j
+537 757 m
+17 11 l
+538 757 m
+13 11 j
+570 756 m
+17 10 l
+571 756 m
+12 12 j
+602 753 m
+17 9 l
+603 753 m
+12 12 j
+635 748 m
+18 8 l
+636 746 m
+11 12 j
+667 742 m
+17 8 l
+668 740 m
+12 13 j
+699 734 m
+17 7 l
+700 732 m
+12 14 j
+430 761 m
+18 14 l
+431 761 m
+10 9 j
+461 765 m
+18 13 l
+462 765 m
+11 9 j
+493 768 m
+18 12 l
+494 768 m
+11 10 j
+E
+524 769 m
+17 11 l
+525 769 m
+12 11 j
+556 768 m
+18 10 l
+557 768 m
+12 11 j
+589 766 m
+18 9 l
+589 766 m
+12 11 j
+621 762 m
+18 8 l
+622 762 m
+12 12 j
+653 757 m
+17 9 l
+654 755 m
+12 12 j
+685 750 m
+17 8 l
+686 748 m
+12 13 j
+717 741 m
+17 7 l
+718 739 m
+12 14 j
+416 770 m
+17 14 l
+417 770 m
+12 8 j
+448 776 m
+17 14 l
+449 776 m
+11 10 j
+480 779 m
+18 13 l
+481 779 m
+11 10 j
+E
+511 780 m
+17 11 l
+512 780 m
+11 10 j
+543 781 m
+18 11 l
+544 781 m
+11 11 j
+575 779 m
+18 10 l
+576 779 m
+12 11 j
+606 777 m
+17 10 l
+607 777 m
+13 13 j
+639 772 m
+17 9 l
+640 770 m
+12 12 j
+671 766 m
+17 8 l
+672 764 m
+12 13 j
+703 758 m
+17 8 l
+704 756 m
+12 14 j
+735 748 m
+17 7 l
+736 746 m
+12 15 j
+404 779 m
+18 15 l
+405 779 m
+11 8 j
+435 785 m
+18 14 l
+436 785 m
+11 8 j
+E
+467 790 m
+18 13 l
+468 790 m
+11 11 j
+498 793 m
+17 14 l
+499 793 m
+11 12 j
+530 794 m
+18 13 l
+531 794 m
+11 12 j
+561 794 m
+17 12 l
+562 794 m
+12 13 j
+593 791 m
+17 11 l
+594 789 m
+12 11 j
+625 787 m
+18 9 l
+626 785 m
+12 12 j
+658 782 m
+18 9 l
+658 780 m
+12 13 j
+689 775 m
+17 9 l
+690 773 m
+12 14 j
+721 766 m
+17 8 l
+722 764 m
+12 15 j
+753 756 m
+17 8 l
+754 754 m
+12 16 j
+E
+391 789 m
+17 16 l
+392 789 m
+11 9 j
+422 796 m
+17 16 l
+423 796 m
+11 10 j
+453 800 m
+17 14 l
+454 800 m
+12 9 j
+485 804 m
+17 13 l
+485 804 m
+12 10 j
+517 806 m
+18 12 l
+518 806 m
+11 11 j
+548 807 m
+17 12 l
+549 807 m
+11 11 j
+580 805 m
+18 10 l
+581 803 m
+11 11 j
+611 802 m
+17 10 l
+612 800 m
+12 12 j
+643 797 m
+17 9 l
+644 796 m
+13 13 j
+675 792 m
+17 9 l
+676 790 m
+12 14 j
+E
+707 784 m
+17 8 l
+708 782 m
+12 15 j
+739 775 m
+17 9 l
+740 773 m
+12 16 j
+771 763 m
+17 7 l
+772 762 m
+12 18 j
+379 797 m
+17 16 l
+380 797 m
+10 7 j
+410 805 m
+18 15 l
+411 805 m
+10 8 j
+441 812 m
+18 15 l
+442 812 m
+10 11 j
+472 815 m
+18 14 l
+473 815 m
+11 10 j
+503 818 m
+18 13 l
+504 818 m
+12 11 j
+535 820 m
+17 13 l
+536 820 m
+11 11 j
+567 819 m
+18 11 l
+568 817 m
+11 11 j
+E
+598 817 m
+17 11 l
+599 815 m
+11 12 j
+630 814 m
+18 11 l
+631 812 m
+11 14 j
+661 808 m
+17 10 l
+662 806 m
+13 13 j
+693 801 m
+17 8 l
+694 799 m
+12 14 j
+725 793 m
+17 9 l
+726 791 m
+12 15 j
+757 782 m
+17 7 l
+758 780 m
+12 16 j
+789 770 m
+17 7 l
+790 768 m
+12 17 j
+366 807 m
+17 16 l
+367 807 m
+11 9 j
+398 815 m
+18 17 l
+399 815 m
+10 9 j
+428 822 m
+17 16 l
+429 822 m
+11 9 j
+E
+459 828 m
+17 15 l
+460 828 m
+11 12 j
+490 831 m
+17 15 l
+491 831 m
+11 12 j
+521 833 m
+17 14 l
+522 833 m
+12 11 j
+553 833 m
+17 12 l
+554 833 m
+12 12 j
+585 832 m
+17 12 l
+586 831 m
+11 13 j
+616 830 m
+17 12 l
+617 828 m
+12 14 j
+648 825 m
+17 11 l
+649 823 m
+11 14 j
+679 818 m
+17 9 l
+680 816 m
+13 14 j
+711 811 m
+17 9 l
+712 809 m
+12 15 j
+743 801 m
+17 8 l
+744 799 m
+12 16 j
+E
+775 790 m
+17 8 l
+776 788 m
+12 17 j
+806 778 m
+16 8 l
+807 776 m
+12 18 j
+354 815 m
+17 18 l
+355 815 m
+10 7 j
+384 825 m
+17 16 l
+385 825 m
+12 9 j
+416 832 m
+17 16 l
+416 832 m
+11 9 j
+447 839 m
+18 16 l
+448 839 m
+10 10 j
+477 843 m
+17 14 l
+478 843 m
+11 12 j
+508 846 m
+17 15 l
+509 846 m
+11 12 j
+539 848 m
+17 14 l
+540 846 m
+12 12 j
+572 847 m
+18 13 l
+572 845 m
+12 12 j
+E
+603 845 m
+17 12 l
+604 843 m
+11 12 j
+634 841 m
+17 10 l
+635 839 m
+12 13 j
+666 835 m
+17 9 l
+667 833 m
+11 14 j
+697 829 m
+17 10 l
+698 827 m
+12 15 j
+729 820 m
+17 8 l
+730 818 m
+12 16 j
+761 810 m
+17 9 l
+762 808 m
+12 17 j
+792 798 m
+16 7 l
+793 797 m
+12 18 j
+824 785 m
+17 7 l
+825 783 m
+12 19 j
+342 825 m
+17 19 l
+343 825 m
+10 9 j
+372 834 m
+17 18 l
+373 834 m
+10 8 j
+E
+403 843 m
+18 17 l
+404 843 m
+11 10 j
+433 850 m
+17 16 l
+434 850 m
+12 10 j
+465 855 m
+17 15 l
+466 855 m
+10 10 j
+496 859 m
+18 15 l
+497 857 m
+10 10 j
+526 861 m
+17 14 l
+527 861 m
+11 12 j
+558 861 m
+18 12 l
+559 859 m
+12 11 j
+589 860 m
+17 12 l
+590 858 m
+12 12 j
+621 857 m
+17 11 l
+622 855 m
+11 13 j
+652 852 m
+17 10 l
+653 850 m
+12 14 j
+684 847 m
+17 11 l
+685 845 m
+11 15 j
+E
+715 839 m
+17 9 l
+716 837 m
+12 16 j
+746 830 m
+16 9 l
+747 828 m
+13 17 j
+779 819 m
+17 8 l
+779 817 m
+12 18 j
+810 806 m
+17 8 l
+811 804 m
+12 18 j
+841 792 m
+16 7 l
+842 790 m
+12 19 j
+330 833 m
+18 19 l
+331 833 m
+10 7 j
+360 845 m
+17 19 l
+361 845 m
+10 10 j
+390 853 m
+17 18 l
+391 853 m
+11 9 j
+421 861 m
+17 16 l
+422 861 m
+11 10 j
+451 867 m
+17 16 l
+452 867 m
+12 11 j
+E
+483 871 m
+17 15 l
+484 871 m
+11 11 j
+514 874 m
+17 14 l
+515 872 m
+10 10 j
+545 876 m
+18 14 l
+546 874 m
+11 12 j
+576 875 m
+17 13 l
+577 873 m
+12 12 j
+607 873 m
+17 12 l
+608 871 m
+12 13 j
+639 869 m
+17 11 l
+640 867 m
+11 14 j
+670 865 m
+17 12 l
+671 863 m
+12 15 j
+701 858 m
+16 10 l
+702 856 m
+12 16 j
+733 849 m
+17 9 l
+734 848 m
+11 17 j
+764 839 m
+17 8 l
+765 837 m
+13 17 j
+E
+796 828 m
+17 8 l
+796 826 m
+13 19 j
+827 814 m
+16 8 l
+828 812 m
+12 19 j
+858 799 m
+16 7 l
+859 797 m
+12 20 j
+318 842 m
+17 20 l
+319 842 m
+11 8 j
+348 854 m
+17 20 l
+349 854 m
+10 8 j
+378 864 m
+17 18 l
+379 864 m
+10 10 j
+409 872 m
+18 17 l
+410 872 m
+10 10 j
+439 879 m
+17 16 l
+440 879 m
+11 11 j
+469 884 m
+17 16 l
+470 884 m
+12 11 j
+501 887 m
+17 15 l
+502 887 m
+11 11 j
+E
+532 890 m
+17 15 l
+533 888 m
+11 11 j
+563 890 m
+17 13 l
+564 888 m
+11 12 j
+594 889 m
+17 13 l
+595 887 m
+11 13 j
+625 886 m
+17 12 l
+626 884 m
+12 14 j
+657 882 m
+17 12 l
+658 880 m
+11 14 j
+688 876 m
+17 10 l
+689 874 m
+11 15 j
+719 868 m
+17 9 l
+720 866 m
+12 16 j
+750 859 m
+16 9 l
+751 857 m
+12 17 j
+781 849 m
+16 9 l
+782 847 m
+13 18 j
+813 836 m
+17 8 l
+814 834 m
+12 20 j
+E
+845 822 m
+17 8 l
+846 820 m
+11 20 j
+875 806 m
+16 7 l
+876 804 m
+12 21 j
+306 851 m
+17 20 l
+307 851 m
+10 8 j
+336 864 m
+17 21 l
+337 864 m
+10 9 j
+365 874 m
+16 19 l
+366 874 m
+11 9 j
+396 884 m
+17 19 l
+397 884 m
+11 11 j
+427 891 m
+17 18 l
+428 891 m
+10 10 j
+457 897 m
+17 16 l
+458 897 m
+10 11 j
+487 901 m
+17 16 l
+488 900 m
+12 12 j
+519 903 m
+17 15 l
+520 903 m
+11 11 j
+E
+550 905 m
+17 14 l
+551 903 m
+11 12 j
+581 904 m
+17 13 l
+582 902 m
+11 12 j
+612 902 m
+17 12 l
+613 901 m
+11 14 j
+643 899 m
+17 12 l
+644 897 m
+12 14 j
+675 894 m
+17 11 l
+675 892 m
+12 15 j
+706 887 m
+17 10 l
+707 885 m
+11 16 j
+737 879 m
+17 10 l
+738 877 m
+11 17 j
+768 869 m
+17 9 l
+769 867 m
+11 18 j
+799 858 m
+17 9 l
+800 856 m
+13 19 j
+831 845 m
+17 8 l
+831 843 m
+13 20 j
+E
+862 830 m
+16 8 l
+863 828 m
+11 21 j
+892 813 m
+16 7 l
+893 811 m
+12 21 j
+295 860 m
+17 22 l
+295 860 m
+10 8 j
+324 873 m
+17 21 l
+325 873 m
+10 8 j
+354 884 m
+17 19 l
+355 884 m
+9 9 j
+383 894 m
+17 19 l
+384 894 m
+11 10 j
+414 902 m
+17 18 l
+415 902 m
+11 10 j
+444 909 m
+16 17 l
+445 909 m
+11 11 j
+475 914 m
+17 16 l
+476 914 m
+10 11 j
+505 918 m
+17 16 l
+506 916 m
+12 12 j
+E
+537 919 m
+17 15 l
+537 918 m
+12 12 j
+568 920 m
+17 14 l
+569 919 m
+11 14 j
+598 919 m
+16 14 l
+599 917 m
+12 14 j
+629 916 m
+16 13 l
+630 914 m
+12 14 j
+660 912 m
+16 12 l
+661 910 m
+13 15 j
+692 906 m
+17 11 l
+693 904 m
+12 16 j
+723 899 m
+16 11 l
+724 897 m
+12 17 j
+754 890 m
+16 10 l
+755 888 m
+12 18 j
+785 879 m
+16 9 l
+786 877 m
+12 18 j
+816 866 m
+16 7 l
+817 865 m
+13 19 j
+E
+848 853 m
+17 7 l
+848 851 m
+13 20 j
+879 837 m
+16 7 l
+880 835 m
+11 21 j
+909 820 m
+16 7 l
+910 818 m
+12 22 j
+282 868 m
+16 22 l
+283 868 m
+11 7 j
+312 883 m
+17 22 l
+313 883 m
+10 9 j
+342 895 m
+17 21 l
+343 895 m
+10 10 j
+371 905 m
+16 20 l
+372 905 m
+10 10 j
+401 914 m
+17 19 l
+402 914 m
+11 11 j
+432 921 m
+17 18 l
+433 921 m
+10 10 j
+462 927 m
+17 16 l
+463 927 m
+11 11 j
+E
+493 932 m
+17 16 l
+494 930 m
+10 11 j
+523 934 m
+17 15 l
+524 932 m
+12 12 j
+554 936 m
+17 16 l
+555 934 m
+12 13 j
+585 935 m
+16 14 l
+586 933 m
+11 14 j
+616 933 m
+17 14 l
+617 931 m
+11 14 j
+647 930 m
+17 13 l
+648 928 m
+11 15 j
+678 924 m
+17 11 l
+679 922 m
+12 15 j
+710 918 m
+17 11 l
+710 916 m
+12 16 j
+741 910 m
+17 10 l
+742 908 m
+11 17 j
+772 901 m
+17 10 l
+773 899 m
+11 19 j
+E
+803 889 m
+17 9 l
+804 887 m
+11 20 j
+833 876 m
+16 9 l
+834 874 m
+13 20 j
+865 861 m
+17 8 l
+865 859 m
+13 21 j
+896 845 m
+16 8 l
+897 843 m
+11 22 j
+926 827 m
+16 7 l
+927 825 m
+12 23 j
+271 877 m
+16 23 l
+272 877 m
+9 8 j
+300 891 m
+17 22 l
+301 891 m
+11 7 j
+330 904 m
+17 20 l
+330 904 m
+11 8 j
+360 916 m
+17 20 l
+361 916 m
+9 10 j
+389 925 m
+17 19 l
+390 925 m
+10 10 j
+E
+419 934 m
+17 19 l
+420 934 m
+11 11 j
+450 940 m
+17 18 l
+451 938 m
+10 10 j
+480 945 m
+17 16 l
+481 945 m
+11 11 j
+511 949 m
+17 16 l
+512 947 m
+10 12 j
+541 951 m
+17 16 l
+542 949 m
+12 13 j
+572 951 m
+17 15 l
+573 949 m
+11 13 j
+603 950 m
+17 14 l
+604 948 m
+11 14 j
+634 947 m
+17 13 l
+635 945 m
+11 14 j
+665 943 m
+17 12 l
+666 941 m
+11 16 j
+696 937 m
+17 12 l
+697 936 m
+12 17 j
+E
+727 930 m
+17 11 l
+727 928 m
+13 17 j
+758 921 m
+16 10 l
+759 919 m
+12 18 j
+789 911 m
+16 10 l
+790 909 m
+12 19 j
+820 899 m
+16 9 l
+821 897 m
+11 20 j
+851 885 m
+17 8 l
+852 884 m
+12 22 j
+882 869 m
+17 7 l
+883 867 m
+12 21 j
+913 852 m
+16 7 l
+914 850 m
+11 22 j
+943 833 m
+16 6 l
+944 831 m
+12 23 j
+260 885 m
+17 23 l
+261 885 m
+9 7 j
+289 901 m
+17 23 l
+290 901 m
+9 9 j
+E
+318 915 m
+17 23 l
+319 915 m
+10 10 j
+347 926 m
+17 21 l
+348 926 m
+11 9 j
+377 937 m
+16 20 l
+378 937 m
+10 10 j
+407 946 m
+17 20 l
+408 946 m
+10 10 j
+437 953 m
+17 18 l
+438 953 m
+11 11 j
+468 958 m
+17 16 l
+468 956 m
+11 10 j
+498 963 m
+17 16 l
+499 961 m
+11 11 j
+528 965 m
+16 15 l
+529 963 m
+11 11 j
+559 966 m
+17 14 l
+560 964 m
+12 12 j
+589 966 m
+16 14 l
+590 964 m
+12 13 j
+E
+621 964 m
+17 13 l
+622 962 m
+11 14 j
+652 960 m
+17 12 l
+653 958 m
+11 14 j
+682 955 m
+16 11 l
+683 954 m
+12 16 j
+713 950 m
+16 12 l
+714 948 m
+12 17 j
+744 941 m
+17 10 l
+745 939 m
+12 17 j
+776 932 m
+17 10 l
+777 930 m
+11 18 j
+806 921 m
+16 9 l
+807 919 m
+12 19 j
+837 908 m
+16 8 l
+838 906 m
+12 20 j
+868 894 m
+16 8 l
+869 892 m
+12 22 j
+899 878 m
+16 8 l
+900 876 m
+12 23 j
+E
+929 860 m
+15 8 l
+930 858 m
+12 24 j
+959 840 m
+15 7 l
+960 838 m
+12 24 j
+248 894 m
+16 25 l
+249 894 m
+10 8 j
+277 910 m
+16 24 l
+278 910 m
+10 9 j
+306 924 m
+16 23 l
+307 924 m
+10 8 j
+335 937 m
+16 21 l
+336 937 m
+11 10 j
+364 948 m
+16 21 l
+365 948 m
+11 10 j
+395 957 m
+17 19 l
+396 957 m
+10 10 j
+425 966 m
+17 19 l
+426 964 m
+10 10 j
+455 971 m
+17 17 l
+456 970 m
+11 11 j
+E
+485 976 m
+17 16 l
+486 974 m
+11 10 j
+516 980 m
+17 16 l
+517 978 m
+10 12 j
+546 982 m
+17 16 l
+547 980 m
+11 13 j
+576 982 m
+16 15 l
+577 980 m
+12 13 j
+607 981 m
+17 14 l
+608 979 m
+12 14 j
+639 978 m
+17 13 l
+640 976 m
+11 15 j
+669 974 m
+16 13 l
+670 972 m
+11 16 j
+700 969 m
+17 13 l
+701 967 m
+11 16 j
+731 962 m
+17 11 l
+732 960 m
+12 18 j
+762 954 m
+17 12 l
+762 952 m
+13 19 j
+E
+793 943 m
+16 10 l
+794 941 m
+11 19 j
+823 932 m
+16 10 l
+824 930 m
+12 21 j
+854 919 m
+16 10 l
+855 917 m
+12 22 j
+884 903 m
+15 8 l
+885 901 m
+13 22 j
+916 886 m
+16 7 l
+917 884 m
+11 23 j
+946 867 m
+16 7 l
+947 866 m
+12 25 j
+976 848 m
+16 8 l
+977 846 m
+12 26 j
+237 901 m
+16 24 l
+238 901 m
+9 6 j
+265 919 m
+16 24 l
+266 919 m
+10 8 j
+295 934 m
+17 23 l
+295 934 m
+10 9 j
+E
+324 948 m
+17 23 l
+325 948 m
+9 10 j
+353 959 m
+17 21 l
+354 959 m
+10 9 j
+382 970 m
+17 21 l
+383 970 m
+11 11 j
+413 978 m
+17 20 l
+414 978 m
+10 10 j
+442 985 m
+16 18 l
+443 985 m
+11 12 j
+472 990 m
+16 18 l
+473 988 m
+12 11 j
+502 994 m
+16 17 l
+503 992 m
+12 11 j
+533 997 m
+16 15 l
+534 995 m
+11 12 j
+564 998 m
+17 15 l
+565 996 m
+10 13 j
+594 997 m
+17 14 l
+595 995 m
+11 13 j
+E
+625 995 m
+17 13 l
+626 993 m
+12 14 j
+656 992 m
+16 13 l
+657 990 m
+11 15 j
+687 988 m
+17 13 l
+688 986 m
+11 16 j
+717 981 m
+16 11 l
+718 979 m
+12 16 j
+748 973 m
+16 10 l
+749 971 m
+12 17 j
+779 965 m
+17 11 l
+779 963 m
+13 19 j
+810 954 m
+16 10 l
+811 953 m
+11 20 j
+841 941 m
+17 8 l
+842 939 m
+11 20 j
+871 928 m
+16 9 l
+872 926 m
+11 22 j
+901 912 m
+16 8 l
+902 910 m
+13 23 j
+E
+932 894 m
+15 8 l
+933 892 m
+12 24 j
+962 875 m
+15 8 l
+963 873 m
+12 24 j
+992 854 m
+15 6 l
+993 852 m
+13 26 j
+226 910 m
+17 26 l
+226 910 m
+10 8 j
+254 928 m
+16 26 l
+255 928 m
+9 9 j
+283 944 m
+17 25 l
+284 944 m
+10 9 j
+312 958 m
+17 23 l
+312 958 m
+11 9 j
+341 971 m
+16 22 l
+342 971 m
+10 11 j
+370 981 m
+16 21 l
+371 981 m
+11 10 j
+400 990 m
+17 19 l
+401 990 m
+11 10 j
+E
+430 998 m
+16 19 l
+431 996 m
+10 10 j
+460 1004 m
+17 18 l
+461 1002 m
+10 11 j
+490 1008 m
+17 16 l
+491 1006 m
+11 11 j
+520 1011 m
+17 16 l
+521 1009 m
+11 11 j
+551 1013 m
+17 15 l
+552 1011 m
+11 12 j
+581 1013 m
+16 14 l
+582 1011 m
+11 13 j
+612 1012 m
+17 14 l
+613 1010 m
+11 14 j
+642 1009 m
+16 13 l
+643 1007 m
+12 14 j
+674 1006 m
+17 13 l
+675 1004 m
+11 16 j
+704 1001 m
+16 13 l
+705 999 m
+11 17 j
+E
+735 994 m
+17 12 l
+736 992 m
+11 18 j
+765 986 m
+16 12 l
+766 984 m
+12 18 j
+796 976 m
+17 10 l
+797 974 m
+12 19 j
+827 965 m
+16 10 l
+828 963 m
+12 21 j
+858 952 m
+16 10 l
+859 950 m
+11 21 j
+888 937 m
+16 8 l
+889 936 m
+11 23 j
+918 920 m
+16 7 l
+919 919 m
+12 24 j
+949 902 m
+16 7 l
+950 901 m
+12 25 j
+979 883 m
+16 8 l
+980 881 m
+12 26 j
+1009 861 m
+16 7 l
+1010 859 m
+12 27 j
+E
+214 919 m
+16 27 l
+215 919 m
+10 8 j
+243 936 m
+17 25 l
+243 936 m
+10 7 j
+271 954 m
+16 25 l
+272 954 m
+10 9 j
+300 969 m
+16 24 l
+301 969 m
+10 10 j
+330 982 m
+18 23 l
+330 982 m
+10 10 j
+359 993 m
+17 22 l
+360 991 m
+9 9 j
+388 1003 m
+17 21 l
+389 1003 m
+10 11 j
+417 1011 m
+16 20 l
+418 1009 m
+11 10 j
+448 1018 m
+17 19 l
+449 1016 m
+10 11 j
+478 1023 m
+17 18 l
+479 1021 m
+10 12 j
+E
+507 1026 m
+16 17 l
+508 1024 m
+12 12 j
+537 1028 m
+16 15 l
+538 1026 m
+12 12 j
+569 1029 m
+17 15 l
+570 1027 m
+10 13 j
+599 1028 m
+17 14 l
+600 1026 m
+11 13 j
+629 1026 m
+16 13 l
+630 1024 m
+11 14 j
+660 1023 m
+17 13 l
+661 1022 m
+12 16 j
+691 1020 m
+16 14 l
+692 1018 m
+11 16 j
+721 1013 m
+16 11 l
+722 1011 m
+12 16 j
+752 1006 m
+16 11 l
+753 1005 m
+11 18 j
+782 998 m
+16 11 l
+783 996 m
+13 19 j
+E
+813 988 m
+16 11 l
+814 986 m
+12 20 j
+844 975 m
+16 9 l
+845 973 m
+12 20 j
+874 962 m
+15 9 l
+875 960 m
+12 22 j
+905 947 m
+16 9 l
+906 945 m
+11 24 j
+935 930 m
+16 9 l
+936 928 m
+13 25 j
+966 911 m
+16 8 l
+967 909 m
+12 25 j
+995 890 m
+15 7 l
+996 888 m
+13 26 j
+1025 867 m
+15 6 l
+1026 866 m
+12 28 j
+204 926 m
+16 26 l
+205 926 m
+8 7 j
+231 945 m
+16 26 l
+232 945 m
+10 8 j
+E
+260 963 m
+17 26 l
+261 963 m
+9 9 j
+289 978 m
+17 24 l
+290 978 m
+9 8 j
+317 992 m
+16 22 l
+318 992 m
+11 9 j
+347 1005 m
+17 22 l
+347 1005 m
+11 11 j
+376 1015 m
+16 21 l
+377 1015 m
+10 10 j
+405 1023 m
+16 19 l
+406 1023 m
+10 10 j
+435 1030 m
+17 18 l
+436 1030 m
+11 10 j
+465 1036 m
+16 17 l
+466 1036 m
+11 12 j
+495 1041 m
+16 18 l
+496 1039 m
+10 12 j
+525 1043 m
+17 16 l
+526 1041 m
+11 12 j
+E
+555 1044 m
+17 15 l
+556 1042 m
+12 12 j
+586 1044 m
+16 14 l
+587 1042 m
+11 13 j
+616 1043 m
+16 14 l
+617 1041 m
+11 14 j
+647 1041 m
+17 14 l
+648 1040 m
+11 16 j
+677 1038 m
+16 14 l
+678 1036 m
+12 15 j
+708 1032 m
+16 11 l
+709 1030 m
+11 16 j
+739 1026 m
+17 12 l
+740 1024 m
+11 17 j
+769 1019 m
+16 12 l
+770 1017 m
+11 18 j
+799 1009 m
+16 10 l
+800 1007 m
+13 19 j
+831 998 m
+17 10 l
+831 996 m
+12 20 j
+E
+861 986 m
+16 10 l
+862 984 m
+11 21 j
+891 971 m
+16 8 l
+892 970 m
+12 22 j
+921 956 m
+15 8 l
+922 954 m
+12 23 j
+952 938 m
+16 7 l
+952 936 m
+13 24 j
+982 919 m
+15 8 l
+983 917 m
+12 26 j
+1011 897 m
+15 7 l
+1012 895 m
+13 27 j
+1041 874 m
+15 7 l
+1042 872 m
+13 28 j
+192 935 m
+16 28 l
+193 935 m
+10 8 j
+220 954 m
+15 27 l
+221 954 m
+9 8 j
+248 972 m
+16 26 l
+249 972 m
+10 8 j
+E
+277 988 m
+16 24 l
+278 988 m
+10 9 j
+306 1003 m
+16 24 l
+307 1003 m
+9 10 j
+334 1016 m
+16 23 l
+335 1016 m
+11 10 j
+364 1026 m
+17 20 l
+364 1026 m
+11 10 j
+393 1036 m
+16 20 l
+394 1036 m
+10 11 j
+423 1043 m
+17 19 l
+424 1041 m
+10 10 j
+452 1050 m
+16 19 l
+453 1048 m
+11 11 j
+483 1055 m
+17 18 l
+484 1053 m
+10 12 j
+513 1058 m
+17 17 l
+514 1056 m
+10 12 j
+542 1059 m
+16 15 l
+543 1058 m
+11 13 j
+E
+572 1060 m
+16 15 l
+573 1058 m
+12 13 j
+604 1059 m
+17 14 l
+605 1058 m
+10 14 j
+634 1058 m
+17 14 l
+635 1057 m
+11 15 j
+664 1055 m
+16 13 l
+665 1053 m
+11 14 j
+694 1051 m
+16 12 l
+695 1049 m
+12 16 j
+726 1045 m
+17 12 l
+727 1043 m
+11 16 j
+756 1039 m
+16 12 l
+757 1037 m
+11 17 j
+786 1030 m
+16 10 l
+787 1028 m
+11 18 j
+816 1021 m
+16 11 l
+817 1019 m
+13 20 j
+848 1009 m
+17 10 l
+848 1007 m
+12 20 j
+E
+878 996 m
+16 9 l
+879 994 m
+11 22 j
+908 982 m
+16 10 l
+909 980 m
+11 23 j
+938 965 m
+16 8 l
+939 963 m
+12 24 j
+969 947 m
+17 8 l
+969 945 m
+13 26 j
+998 926 m
+15 7 l
+999 924 m
+12 26 j
+1028 904 m
+16 7 l
+1029 902 m
+12 27 j
+1057 881 m
+15 7 l
+1058 879 m
+13 30 j
+181 942 m
+15 28 l
+182 942 m
+9 6 j
+209 963 m
+16 27 l
+210 963 m
+9 8 j
+237 982 m
+16 27 l
+238 982 m
+9 9 j
+E
+265 999 m
+16 26 l
+266 999 m
+10 10 j
+294 1014 m
+16 25 l
+295 1014 m
+10 10 j
+323 1027 m
+16 23 l
+324 1027 m
+9 9 j
+352 1039 m
+17 22 l
+353 1037 m
+10 10 j
+382 1048 m
+18 21 l
+382 1046 m
+10 9 j
+411 1057 m
+17 20 l
+412 1055 m
+10 11 j
+440 1063 m
+16 19 l
+441 1061 m
+10 10 j
+470 1068 m
+17 16 l
+471 1066 m
+11 10 j
+500 1072 m
+16 15 l
+501 1070 m
+11 12 j
+530 1075 m
+16 16 l
+531 1073 m
+10 13 j
+E
+560 1076 m
+17 16 l
+561 1074 m
+11 13 j
+590 1076 m
+17 15 l
+591 1074 m
+12 14 j
+621 1075 m
+16 15 l
+622 1073 m
+11 14 j
+651 1072 m
+16 13 l
+652 1070 m
+11 14 j
+681 1069 m
+16 13 l
+682 1067 m
+11 15 j
+711 1064 m
+16 12 l
+712 1062 m
+13 16 j
+743 1058 m
+16 12 l
+744 1057 m
+11 17 j
+773 1051 m
+16 11 l
+774 1049 m
+11 18 j
+803 1042 m
+16 11 l
+804 1041 m
+11 19 j
+833 1032 m
+16 10 l
+834 1030 m
+13 20 j
+E
+864 1021 m
+16 11 l
+865 1019 m
+12 22 j
+895 1006 m
+16 9 l
+896 1005 m
+11 22 j
+924 991 m
+15 8 l
+925 989 m
+12 23 j
+954 974 m
+15 8 l
+955 972 m
+13 24 j
+985 955 m
+16 7 l
+986 954 m
+12 27 j
+1014 935 m
+15 8 l
+1015 933 m
+13 28 j
+1044 912 m
+15 8 l
+1045 910 m
+12 28 j
+1073 887 m
+15 6 l
+1074 885 m
+13 29 j
+171 951 m
+16 30 l
+172 951 m
+8 8 j
+198 971 m
+16 28 l
+199 971 m
+10 7 j
+E
+226 991 m
+16 27 l
+226 991 m
+10 8 j
+254 1008 m
+16 25 l
+255 1008 m
+9 8 j
+282 1024 m
+16 24 l
+283 1024 m
+10 9 j
+312 1039 m
+17 24 l
+312 1039 m
+10 10 j
+340 1050 m
+16 22 l
+341 1050 m
+10 10 j
+369 1060 m
+16 20 l
+370 1060 m
+11 10 j
+399 1069 m
+17 20 l
+399 1069 m
+11 11 j
+428 1076 m
+16 18 l
+429 1075 m
+10 11 j
+457 1081 m
+16 17 l
+458 1081 m
+11 11 j
+487 1086 m
+16 17 l
+488 1084 m
+11 11 j
+E
+518 1089 m
+17 16 l
+519 1087 m
+10 11 j
+547 1091 m
+16 15 l
+548 1089 m
+11 13 j
+577 1091 m
+16 15 l
+578 1089 m
+11 13 j
+607 1091 m
+16 15 l
+608 1089 m
+12 13 j
+638 1089 m
+16 13 l
+639 1087 m
+11 14 j
+668 1086 m
+16 13 l
+669 1084 m
+11 14 j
+698 1082 m
+16 12 l
+699 1080 m
+11 15 j
+729 1076 m
+17 11 l
+730 1075 m
+12 16 j
+760 1071 m
+16 12 l
+761 1069 m
+11 17 j
+790 1062 m
+16 10 l
+791 1060 m
+11 17 j
+E
+820 1054 m
+16 11 l
+821 1052 m
+11 19 j
+850 1043 m
+16 10 l
+851 1041 m
+12 19 j
+881 1031 m
+16 9 l
+882 1029 m
+12 22 j
+911 1017 m
+15 10 l
+912 1015 m
+11 23 j
+941 1001 m
+16 9 l
+942 999 m
+11 24 j
+971 984 m
+16 9 l
+972 982 m
+13 26 j
+1001 964 m
+15 8 l
+1002 962 m
+12 26 j
+1031 942 m
+16 7 l
+1032 940 m
+12 27 j
+1060 919 m
+15 7 l
+1061 917 m
+12 29 j
+1089 893 m
+15 6 l
+1090 891 m
+13 29 j
+E
+188 980 m
+16 28 l
+189 980 m
+8 8 j
+215 1000 m
+16 28 l
+216 1000 m
+9 8 j
+243 1019 m
+17 27 l
+243 1019 m
+10 10 j
+271 1035 m
+16 26 l
+272 1035 m
+9 10 j
+299 1049 m
+16 24 l
+300 1049 m
+11 9 j
+329 1061 m
+17 21 l
+330 1061 m
+9 9 j
+357 1073 m
+16 22 l
+358 1073 m
+10 11 j
+386 1081 m
+16 20 l
+387 1081 m
+11 10 j
+416 1089 m
+17 19 l
+416 1089 m
+11 11 j
+445 1094 m
+16 17 l
+446 1093 m
+10 11 j
+E
+475 1099 m
+17 16 l
+476 1097 m
+10 10 j
+504 1103 m
+16 15 l
+505 1101 m
+12 11 j
+535 1105 m
+16 15 l
+536 1103 m
+10 11 j
+565 1106 m
+17 14 l
+566 1104 m
+10 12 j
+595 1106 m
+17 14 l
+596 1104 m
+10 12 j
+625 1105 m
+17 13 l
+626 1103 m
+11 13 j
+655 1102 m
+16 12 l
+656 1100 m
+11 13 j
+686 1099 m
+17 12 l
+687 1097 m
+10 14 j
+716 1094 m
+17 11 l
+717 1093 m
+11 16 j
+746 1089 m
+16 12 l
+747 1087 m
+12 15 j
+E
+777 1082 m
+16 10 l
+778 1080 m
+11 17 j
+807 1075 m
+16 12 l
+808 1073 m
+11 18 j
+837 1065 m
+16 10 l
+838 1063 m
+11 19 j
+867 1054 m
+16 10 l
+868 1052 m
+12 20 j
+898 1041 m
+16 9 l
+899 1040 m
+11 22 j
+928 1027 m
+16 9 l
+929 1025 m
+11 23 j
+957 1011 m
+15 9 l
+958 1009 m
+12 24 j
+987 992 m
+15 7 l
+988 990 m
+13 25 j
+1017 972 m
+15 7 l
+1018 971 m
+13 28 j
+1047 950 m
+15 8 l
+1048 948 m
+12 29 j
+E
+1075 926 m
+14 7 l
+1076 924 m
+13 30 j
+204 1009 m
+15 28 l
+205 1009 m
+9 8 j
+231 1028 m
+15 27 l
+232 1028 m
+10 8 j
+260 1045 m
+17 25 l
+261 1045 m
+9 9 j
+288 1060 m
+16 24 l
+289 1060 m
+9 9 j
+316 1073 m
+16 23 l
+317 1073 m
+11 11 j
+346 1084 m
+16 22 l
+347 1084 m
+9 9 j
+375 1093 m
+17 19 l
+376 1092 m
+9 10 j
+403 1101 m
+16 19 l
+404 1101 m
+11 10 j
+433 1108 m
+17 18 l
+434 1106 m
+10 11 j
+E
+463 1112 m
+17 16 l
+464 1110 m
+10 10 j
+492 1116 m
+16 15 l
+493 1114 m
+10 10 j
+522 1119 m
+17 15 l
+523 1117 m
+11 11 j
+552 1120 m
+16 14 l
+553 1118 m
+11 11 j
+582 1120 m
+16 13 l
+583 1118 m
+11 11 j
+612 1120 m
+16 13 l
+613 1118 m
+11 12 j
+642 1118 m
+16 12 l
+643 1116 m
+11 13 j
+673 1115 m
+17 12 l
+674 1113 m
+11 13 j
+703 1111 m
+16 11 l
+704 1110 m
+11 15 j
+733 1107 m
+16 12 l
+734 1105 m
+11 15 j
+E
+763 1101 m
+16 11 l
+764 1099 m
+12 16 j
+794 1094 m
+16 11 l
+795 1093 m
+11 17 j
+824 1086 m
+16 10 l
+825 1084 m
+11 18 j
+854 1076 m
+16 10 l
+855 1075 m
+11 20 j
+884 1065 m
+16 10 l
+885 1063 m
+12 21 j
+914 1052 m
+15 10 l
+915 1050 m
+12 22 j
+944 1037 m
+15 9 l
+945 1035 m
+11 23 j
+974 1021 m
+16 9 l
+975 1019 m
+12 26 j
+1004 1002 m
+16 9 l
+1004 1000 m
+13 27 j
+1033 981 m
+15 8 l
+1034 979 m
+13 28 j
+E
+1062 958 m
+14 7 l
+1063 956 m
+12 29 j
+221 1038 m
+16 28 l
+222 1038 m
+8 9 j
+248 1056 m
+16 27 l
+249 1056 m
+10 10 j
+277 1071 m
+16 25 l
+278 1071 m
+9 10 j
+305 1084 m
+16 23 l
+306 1084 m
+9 9 j
+333 1096 m
+16 22 l
+334 1096 m
+11 10 j
+363 1106 m
+16 21 l
+364 1106 m
+10 11 j
+392 1113 m
+16 19 l
+393 1111 m
+9 9 j
+421 1120 m
+17 18 l
+422 1120 m
+11 10 j
+451 1126 m
+17 17 l
+451 1124 m
+11 11 j
+E
+480 1129 m
+16 15 l
+481 1128 m
+10 11 j
+509 1132 m
+16 15 l
+510 1132 m
+11 11 j
+539 1134 m
+16 14 l
+540 1132 m
+11 11 j
+570 1134 m
+17 13 l
+571 1132 m
+10 11 j
+599 1134 m
+16 13 l
+600 1132 m
+11 11 j
+629 1133 m
+16 12 l
+630 1131 m
+11 12 j
+659 1130 m
+16 11 l
+660 1128 m
+12 12 j
+690 1128 m
+16 12 l
+691 1126 m
+11 14 j
+720 1124 m
+16 12 l
+721 1122 m
+11 14 j
+750 1119 m
+16 11 l
+751 1117 m
+11 15 j
+E
+780 1112 m
+16 10 l
+781 1110 m
+12 15 j
+810 1106 m
+15 11 l
+811 1104 m
+12 17 j
+840 1097 m
+15 10 l
+841 1095 m
+12 18 j
+870 1087 m
+15 10 l
+871 1085 m
+12 19 j
+900 1076 m
+15 10 l
+901 1074 m
+12 21 j
+931 1062 m
+16 9 l
+932 1060 m
+11 22 j
+961 1047 m
+16 9 l
+962 1045 m
+11 23 j
+990 1030 m
+15 8 l
+991 1028 m
+13 25 j
+1020 1010 m
+16 7 l
+1021 1008 m
+12 26 j
+1049 989 m
+15 7 l
+1050 988 m
+12 29 j
+E
+237 1066 m
+15 27 l
+238 1066 m
+9 9 j
+265 1081 m
+16 24 l
+266 1081 m
+10 9 j
+294 1095 m
+16 23 l
+295 1095 m
+9 9 j
+322 1108 m
+16 23 l
+323 1108 m
+9 10 j
+351 1117 m
+17 20 l
+352 1117 m
+10 9 j
+380 1126 m
+16 19 l
+381 1126 m
+10 11 j
+409 1132 m
+16 18 l
+410 1132 m
+10 10 j
+438 1138 m
+16 17 l
+439 1138 m
+11 10 j
+468 1142 m
+17 15 l
+468 1142 m
+11 11 j
+497 1145 m
+16 15 l
+498 1145 m
+10 11 j
+E
+527 1146 m
+17 13 l
+528 1146 m
+10 10 j
+556 1147 m
+16 12 l
+557 1147 m
+12 11 j
+587 1147 m
+16 12 l
+588 1145 m
+10 10 j
+616 1147 m
+16 12 l
+617 1145 m
+11 11 j
+646 1145 m
+16 11 l
+647 1144 m
+11 13 j
+676 1143 m
+16 12 l
+677 1141 m
+12 13 j
+707 1140 m
+16 12 l
+708 1138 m
+11 13 j
+737 1135 m
+16 10 l
+738 1133 m
+11 13 j
+766 1130 m
+15 10 l
+767 1128 m
+12 15 j
+796 1124 m
+15 11 l
+797 1122 m
+12 15 j
+E
+827 1116 m
+16 9 l
+828 1114 m
+11 16 j
+857 1108 m
+16 10 l
+858 1106 m
+11 18 j
+887 1097 m
+16 9 l
+888 1095 m
+12 19 j
+917 1086 m
+16 10 l
+918 1084 m
+12 21 j
+947 1072 m
+15 9 l
+948 1070 m
+12 22 j
+977 1057 m
+15 9 l
+978 1055 m
+11 24 j
+1006 1039 m
+15 8 l
+1007 1037 m
+13 26 j
+1036 1020 m
+15 9 l
+1037 1018 m
+12 28 j
+254 1093 m
+16 26 l
+255 1093 m
+9 10 j
+282 1107 m
+16 25 l
+283 1107 m
+10 10 j
+E
+311 1119 m
+16 23 l
+312 1119 m
+9 9 j
+339 1129 m
+16 20 l
+340 1129 m
+10 10 j
+368 1138 m
+16 20 l
+369 1136 m
+10 9 j
+397 1145 m
+16 18 l
+398 1145 m
+10 11 j
+426 1150 m
+16 17 l
+427 1150 m
+10 10 j
+455 1154 m
+16 15 l
+456 1154 m
+11 10 j
+485 1158 m
+17 15 l
+485 1156 m
+11 11 j
+515 1160 m
+17 15 l
+516 1158 m
+10 11 j
+544 1161 m
+16 14 l
+545 1159 m
+10 11 j
+573 1161 m
+16 13 l
+574 1161 m
+12 12 j
+E
+604 1161 m
+16 13 l
+605 1159 m
+10 11 j
+633 1159 m
+16 11 l
+634 1159 m
+11 12 j
+663 1157 m
+16 11 l
+664 1155 m
+11 11 j
+693 1154 m
+16 10 l
+694 1152 m
+12 11 j
+724 1151 m
+16 10 l
+725 1149 m
+11 13 j
+753 1146 m
+15 10 l
+754 1145 m
+11 14 j
+783 1142 m
+16 11 l
+784 1140 m
+12 15 j
+813 1135 m
+16 10 l
+814 1133 m
+12 16 j
+844 1128 m
+16 11 l
+845 1126 m
+11 17 j
+874 1118 m
+16 9 l
+875 1116 m
+11 18 j
+E
+903 1108 m
+15 10 l
+904 1106 m
+13 19 j
+934 1096 m
+16 9 l
+934 1094 m
+12 21 j
+964 1082 m
+16 9 l
+965 1080 m
+11 22 j
+993 1066 m
+15 8 l
+994 1064 m
+12 24 j
+1022 1048 m
+15 8 l
+1023 1046 m
+13 25 j
+271 1117 m
+16 24 l
+272 1117 m
+9 9 j
+299 1129 m
+16 21 l
+300 1129 m
+10 9 j
+328 1141 m
+16 21 l
+329 1141 m
+9 10 j
+356 1149 m
+16 19 l
+357 1149 m
+10 10 j
+385 1156 m
+16 17 l
+386 1156 m
+10 10 j
+E
+414 1162 m
+16 16 l
+415 1162 m
+10 11 j
+443 1166 m
+16 15 l
+444 1166 m
+10 10 j
+472 1169 m
+16 14 l
+473 1169 m
+11 10 j
+502 1172 m
+17 13 l
+503 1172 m
+11 10 j
+532 1173 m
+16 12 l
+533 1173 m
+10 10 j
+561 1173 m
+16 11 l
+562 1173 m
+10 10 j
+590 1173 m
+16 11 l
+591 1173 m
+12 11 j
+621 1172 m
+16 10 l
+622 1170 m
+10 10 j
+650 1170 m
+16 10 l
+651 1170 m
+11 11 j
+680 1168 m
+16 10 l
+681 1166 m
+12 11 j
+E
+710 1165 m
+16 10 l
+711 1163 m
+12 11 j
+740 1162 m
+15 10 l
+741 1160 m
+11 13 j
+770 1157 m
+16 10 l
+771 1155 m
+11 12 j
+800 1152 m
+16 9 l
+801 1150 m
+12 14 j
+831 1145 m
+17 9 l
+831 1144 m
+12 16 j
+860 1138 m
+15 10 l
+861 1136 m
+12 17 j
+890 1128 m
+15 9 l
+891 1127 m
+11 18 j
+920 1118 m
+16 9 l
+921 1116 m
+12 19 j
+950 1106 m
+16 9 l
+951 1104 m
+12 21 j
+980 1092 m
+15 9 l
+981 1090 m
+11 23 j
+E
+1009 1076 m
+15 9 l
+1010 1074 m
+12 25 j
+288 1141 m
+16 23 l
+289 1141 m
+9 10 j
+316 1151 m
+16 21 l
+317 1151 m
+10 9 j
+345 1161 m
+16 19 l
+346 1161 m
+9 10 j
+373 1167 m
+16 17 l
+374 1167 m
+10 10 j
+402 1173 m
+16 15 l
+403 1173 m
+10 10 j
+432 1178 m
+17 15 l
+433 1178 m
+9 10 j
+461 1180 m
+17 13 l
+462 1180 m
+9 9 j
+490 1183 m
+17 13 l
+491 1183 m
+11 10 j
+520 1184 m
+17 11 l
+520 1184 m
+11 10 j
+E
+549 1185 m
+16 11 l
+550 1185 m
+10 10 j
+578 1185 m
+16 11 l
+579 1185 m
+10 10 j
+607 1184 m
+16 10 l
+608 1184 m
+12 11 j
+638 1182 m
+16 9 l
+639 1182 m
+10 10 j
+667 1180 m
+16 9 l
+668 1180 m
+11 11 j
+697 1179 m
+16 10 l
+698 1179 m
+12 12 j
+727 1176 m
+16 10 l
+728 1174 m
+11 11 j
+757 1172 m
+16 9 l
+758 1170 m
+11 12 j
+787 1167 m
+16 9 l
+788 1165 m
+11 12 j
+817 1162 m
+16 9 l
+818 1160 m
+12 14 j
+E
+847 1156 m
+16 10 l
+848 1154 m
+11 15 j
+877 1147 m
+16 8 l
+878 1145 m
+11 16 j
+907 1139 m
+16 10 l
+908 1137 m
+11 18 j
+936 1128 m
+15 9 l
+937 1127 m
+12 20 j
+967 1116 m
+16 9 l
+968 1114 m
+11 21 j
+996 1102 m
+15 9 l
+997 1100 m
+11 24 j
+305 1163 m
+16 21 l
+306 1163 m
+9 10 j
+333 1171 m
+16 19 l
+334 1171 m
+10 9 j
+362 1179 m
+16 17 l
+363 1179 m
+9 10 j
+390 1184 m
+16 15 l
+391 1184 m
+10 10 j
+E
+419 1189 m
+16 15 l
+420 1189 m
+11 10 j
+449 1192 m
+16 13 l
+450 1192 m
+10 11 j
+478 1194 m
+16 13 l
+479 1194 m
+10 10 j
+507 1196 m
+16 12 l
+508 1196 m
+11 11 j
+537 1196 m
+17 11 l
+537 1196 m
+11 10 j
+566 1196 m
+16 10 l
+567 1196 m
+10 10 j
+595 1195 m
+16 9 l
+596 1195 m
+10 10 j
+624 1194 m
+16 9 l
+625 1194 m
+12 11 j
+655 1193 m
+16 10 l
+656 1193 m
+10 11 j
+684 1191 m
+16 10 l
+685 1191 m
+11 11 j
+E
+714 1188 m
+16 8 l
+715 1188 m
+12 11 j
+744 1185 m
+16 8 l
+744 1185 m
+12 11 j
+774 1181 m
+16 8 l
+775 1180 m
+11 12 j
+803 1177 m
+15 9 l
+804 1175 m
+12 12 j
+833 1171 m
+15 8 l
+834 1169 m
+12 12 j
+864 1165 m
+16 8 l
+865 1163 m
+11 15 j
+893 1158 m
+15 10 l
+894 1156 m
+12 16 j
+923 1148 m
+15 8 l
+924 1146 m
+11 17 j
+952 1138 m
+15 9 l
+953 1136 m
+13 19 j
+983 1126 m
+15 9 l
+984 1124 m
+11 21 j
+E
+321 1182 m
+15 19 l
+322 1182 m
+10 10 j
+350 1189 m
+16 17 l
+351 1189 m
+10 9 j
+379 1195 m
+16 15 l
+380 1195 m
+9 10 j
+407 1199 m
+16 14 l
+408 1199 m
+10 9 j
+436 1202 m
+16 12 l
+437 1202 m
+11 9 j
+466 1204 m
+16 11 l
+467 1204 m
+10 9 j
+495 1205 m
+16 10 l
+496 1205 m
+10 8 j
+524 1206 m
+16 9 l
+525 1206 m
+11 9 j
+554 1206 m
+17 9 l
+554 1206 m
+11 9 j
+583 1205 m
+16 8 l
+584 1205 m
+10 9 j
+E
+612 1204 m
+16 8 l
+613 1204 m
+10 9 j
+641 1203 m
+16 8 l
+642 1203 m
+12 9 j
+672 1201 m
+16 7 l
+673 1201 m
+10 9 j
+701 1199 m
+16 7 l
+702 1199 m
+11 10 j
+730 1197 m
+15 8 l
+731 1197 m
+12 11 j
+761 1194 m
+17 8 l
+762 1194 m
+11 12 j
+790 1190 m
+15 8 l
+791 1190 m
+11 11 j
+820 1185 m
+16 7 l
+821 1183 m
+11 11 j
+849 1180 m
+15 8 l
+850 1179 m
+13 13 j
+880 1174 m
+15 8 l
+881 1172 m
+11 13 j
+E
+910 1167 m
+16 8 l
+911 1165 m
+11 16 j
+939 1158 m
+15 9 l
+940 1156 m
+12 17 j
+969 1147 m
+16 8 l
+969 1145 m
+13 18 j
+338 1199 m
+16 15 l
+339 1199 m
+10 9 j
+367 1205 m
+16 15 l
+368 1205 m
+10 9 j
+396 1210 m
+16 14 l
+397 1210 m
+9 10 j
+425 1213 m
+17 13 l
+426 1213 m
+9 10 j
+453 1215 m
+16 12 l
+454 1215 m
+11 10 j
+483 1215 m
+16 10 l
+484 1215 m
+10 9 j
+512 1215 m
+16 9 l
+513 1215 m
+10 8 j
+E
+541 1215 m
+16 8 l
+542 1215 m
+11 8 j
+571 1215 m
+17 8 l
+572 1215 m
+10 9 j
+600 1214 m
+16 8 l
+601 1214 m
+10 9 j
+629 1213 m
+16 8 l
+630 1213 m
+11 9 j
+658 1211 m
+15 7 l
+659 1211 m
+12 9 j
+688 1209 m
+14 7 l
+689 1209 m
+11 9 j
+718 1207 m
+15 7 l
+719 1207 m
+10 9 j
+747 1204 m
+15 6 l
+748 1204 m
+12 9 j
+777 1201 m
+15 6 l
+778 1201 m
+11 10 j
+807 1198 m
+16 7 l
+808 1198 m
+11 11 j
+E
+836 1194 m
+15 8 l
+837 1194 m
+11 12 j
+866 1189 m
+16 8 l
+867 1187 m
+12 12 j
+896 1183 m
+15 8 l
+897 1181 m
+12 13 j
+926 1176 m
+15 8 l
+927 1174 m
+11 15 j
+955 1167 m
+15 8 l
+956 1165 m
+12 17 j
+355 1215 m
+16 15 l
+356 1215 m
+10 9 j
+384 1219 m
+16 13 l
+385 1219 m
+10 8 j
+413 1222 m
+16 11 l
+414 1222 m
+10 8 j
+442 1223 m
+16 9 l
+443 1223 m
+9 8 j
+470 1224 m
+16 9 l
+471 1224 m
+11 8 j
+E
+500 1224 m
+16 8 l
+501 1224 m
+10 8 j
+529 1224 m
+16 8 l
+530 1224 m
+10 8 j
+558 1223 m
+15 7 l
+559 1223 m
+11 8 j
+588 1222 m
+16 7 l
+589 1222 m
+10 7 j
+617 1220 m
+15 5 l
+618 1220 m
+10 6 j
+646 1219 m
+15 5 l
+647 1219 m
+11 7 j
+675 1217 m
+15 5 l
+676 1217 m
+11 7 j
+705 1215 m
+15 5 l
+706 1215 m
+11 7 j
+734 1214 m
+14 6 l
+735 1214 m
+11 9 j
+763 1212 m
+14 7 l
+764 1212 m
+12 10 j
+E
+794 1209 m
+15 7 l
+795 1209 m
+11 10 j
+823 1206 m
+14 7 l
+824 1206 m
+11 11 j
+853 1202 m
+16 7 l
+854 1202 m
+11 11 j
+883 1198 m
+16 8 l
+883 1196 m
+12 12 j
+912 1192 m
+15 8 l
+913 1190 m
+12 13 j
+942 1184 m
+15 7 l
+943 1182 m
+11 14 j
+372 1229 m
+16 13 l
+373 1229 m
+10 9 j
+401 1231 m
+16 11 l
+402 1231 m
+10 8 j
+430 1232 m
+16 9 l
+431 1232 m
+10 8 j
+459 1233 m
+16 9 l
+460 1233 m
+9 8 j
+E
+487 1232 m
+15 7 l
+488 1232 m
+11 7 j
+517 1232 m
+15 7 l
+518 1232 m
+10 7 j
+546 1230 m
+15 5 l
+547 1230 m
+10 6 j
+574 1229 m
+14 5 l
+575 1229 m
+12 6 j
+604 1228 m
+15 5 l
+605 1228 m
+11 7 j
+633 1226 m
+14 5 l
+634 1226 m
+11 6 j
+662 1224 m
+14 5 l
+663 1224 m
+12 6 j
+692 1223 m
+15 5 l
+693 1223 m
+11 7 j
+721 1221 m
+14 5 l
+722 1221 m
+11 6 j
+751 1219 m
+15 4 l
+752 1219 m
+10 6 j
+E
+780 1217 m
+15 4 l
+781 1217 m
+12 7 j
+810 1215 m
+14 5 l
+811 1215 m
+11 8 j
+839 1213 m
+14 6 l
+840 1213 m
+12 10 j
+869 1209 m
+14 6 l
+870 1209 m
+12 11 j
+899 1205 m
+16 7 l
+900 1205 m
+11 11 j
+928 1199 m
+15 7 l
+929 1198 m
+12 13 j
+389 1239 m
+16 9 l
+390 1239 m
+10 7 j
+418 1240 m
+16 8 l
+419 1240 m
+10 7 j
+447 1240 m
+16 7 l
+448 1240 m
+10 7 j
+476 1239 m
+15 6 l
+477 1239 m
+9 6 j
+E
+504 1238 m
+15 5 l
+505 1238 m
+11 5 j
+534 1236 m
+15 4 l
+535 1236 m
+10 5 j
+562 1235 m
+14 4 l
+563 1235 m
+10 5 j
+591 1233 m
+15 4 l
+592 1233 m
+10 4 j
+621 1232 m
+15 4 l
+622 1232 m
+9 5 j
+650 1230 m
+15 4 l
+651 1230 m
+9 5 j
+679 1229 m
+15 5 l
+680 1229 m
+10 5 j
+709 1227 m
+16 4 l
+710 1227 m
+9 5 j
+738 1226 m
+15 5 l
+739 1226 m
+11 6 j
+767 1224 m
+14 5 l
+768 1224 m
+11 6 j
+E
+796 1223 m
+14 5 l
+797 1223 m
+12 7 j
+826 1221 m
+14 5 l
+827 1221 m
+11 7 j
+855 1218 m
+14 4 l
+856 1218 m
+12 8 j
+885 1215 m
+14 5 l
+886 1215 m
+12 9 j
+915 1212 m
+15 6 l
+916 1212 m
+11 12 j
+406 1247 m
+15 7 l
+407 1247 m
+10 6 j
+435 1247 m
+15 6 l
+436 1247 m
+10 6 j
+464 1246 m
+15 5 l
+465 1246 m
+10 6 j
+493 1244 m
+15 5 l
+494 1244 m
+9 5 j
+521 1242 m
+15 4 l
+522 1242 m
+10 5 j
+E
+551 1240 m
+15 4 l
+552 1240 m
+8 4 j
+579 1238 m
+15 3 l
+580 1238 m
+9 4 j
+608 1236 m
+15 3 l
+609 1236 m
+10 3 j
+638 1234 m
+15 2 l
+639 1234 m
+9 3 j
+666 1233 m
+14 3 l
+667 1233 m
+10 3 j
+695 1232 m
+14 3 l
+696 1232 m
+11 4 j
+725 1231 m
+15 4 l
+726 1231 m
+10 4 j
+754 1230 m
+14 4 l
+755 1230 m
+10 5 j
+783 1229 m
+14 5 l
+784 1229 m
+11 5 j
+813 1228 m
+15 5 l
+813 1228 m
+12 6 j
+E
+842 1226 m
+14 5 l
+843 1226 m
+11 7 j
+871 1224 m
+14 5 l
+872 1224 m
+12 8 j
+901 1222 m
+14 6 l
+902 1222 m
+12 9 j
+423 1252 m
+15 4 l
+424 1252 m
+9 4 j
+452 1251 m
+15 4 l
+453 1251 m
+10 4 j
+481 1249 m
+15 3 l
+482 1249 m
+9 4 j
+509 1247 m
+14 3 l
+510 1247 m
+10 4 j
+538 1244 m
+15 2 l
+539 1244 m
+10 4 j
+567 1242 m
+14 2 l
+568 1242 m
+9 4 j
+596 1239 m
+15 1 l
+597 1239 m
+9 3 j
+E
+624 1237 m
+14 1 l
+625 1237 m
+11 3 j
+654 1236 m
+14 2 l
+655 1236 m
+9 3 j
+683 1234 m
+15 1 l
+684 1234 m
+9 2 j
+711 1233 m
+14 1 l
+712 1233 m
+11 2 j
+741 1233 m
+14 2 l
+742 1233 m
+10 3 j
+770 1233 m
+14 3 l
+771 1233 m
+10 4 j
+799 1232 m
+14 3 l
+800 1232 m
+11 4 j
+829 1231 m
+15 3 l
+830 1231 m
+10 4 j
+858 1231 m
+14 5 l
+859 1231 m
+11 6 j
+887 1229 m
+14 5 l
+888 1229 m
+12 6 j
+E
+440 1256 m
+15 4 l
+441 1256 m
+10 4 j
+469 1253 m
+15 2 l
+470 1253 m
+9 3 j
+498 1250 m
+15 1 l
+499 1250 m
+8 2 j
+526 1247 m
+15 w
+527 1247 m
+10 3 j
+554 1244 m
+14 w
+555 1244 m
+10 2 j
+584 1242 m
+15 w
+585 1242 m
+9 3 j
+612 1239 m
+14 w
+613 1239 m
+10 2 j
+641 1237 m
+15 w
+642 1237 m
+10 1 j
+670 1236 m
+14 w
+671 1236 m
+10 2 j
+699 1235 m
+14 1 l
+700 1235 m
+10 2 j
+E
+728 1234 m
+15 1 l
+729 1234 m
+10 1 j
+757 1233 m
+14 w
+758 1233 m
+10 x
+786 1233 m
+14 w
+787 1233 m
+10 1 j
+815 1233 m
+14 1 l
+816 1233 m
+11 2 j
+845 1233 m
+14 2 l
+846 1233 m
+10 2 j
+874 1233 m
+14 2 l
+875 1233 m
+10 3 j
+457 1256 m
+15 w
+458 1256 m
+10 3 j
+485 1253 m
+14 w
+486 1253 m
+10 3 j
+515 1250 m
+15 w
+516 1250 m
+7 2 j
+543 1246 m
+15 1 k
+544 1246 m
+6 1 j
+E
+572 1243 m
+16 1 k
+572 1243 m
+0 y
+600 1240 m
+14 2 k
+601 1240 m
+0 y
+627 1238 m
+13 1 k
+656 1237 m
+13 w
+684 1235 m
+6 w
+676 1236 m
+4 w
+688 1235 m
+9 x
+715 1234 m
+14 1 k
+716 1234 m
+11 x
+744 1233 m
+14 1 k
+745 1233 m
+10 x
+773 1234 m
+14 1 l
+774 1234 m
+10 1 j
+802 1234 m
+14 1 l
+803 1234 m
+10 1 j
+831 1235 m
+14 2 l
+832 1235 m
+11 2 j
+861 1236 m
+14 3 l
+E
+862 1236 m
+10 3 j
+474 1254 m
+15 2 k
+475 1254 m
+0 y
+501 1251 m
+10 1 k
+489 1253 m
+2 w
+529 1248 m
+9 1 k
+519 1250 m
+2 w
+553 1245 m
+2 w
+547 1246 m
+2 w
+574 1243 m
+1 w
+603 1240 m
+1 w
+768 1234 m
+3 x
+787 1234 m
+12 w
+791 1234 m
+9 x
+818 1234 m
+14 w
+819 1234 m
+11 1 h
+847 1235 m
+14 w
+848 1235 m
+11 1 h
+477 1254 m
+1 w
+E
+1101 835 m
+556 207 l
+389 268 k
+138 1206 m
+18 310 j
+E
+545 628 m
+7 20 j
+665 673 m
+8 20 j
+780 716 m
+8 20 j
+892 757 m
+7 20 j
+998 797 m
+7 21 j
+1101 835 m
+7 20 j
+E
+20.4278 Sr
+20.4278 Sh
+( 0) 567 568 0.5 T
+(0.2) 687 612 0.5 T
+(0.4) 803 656 0.5 T
+(0.6) 914 697 0.5 T
+(0.8) 1020 736 0.5 T
+(1) 1123 775 0.5 T
+(X1) 860 632 0.5 T
+0 Sr
+0 Sh
+545 628 m
+12 17 l
+458 687 m
+12 18 l
+377 744 m
+12 18 l
+299 797 m
+12 18 l
+226 848 m
+13 18 l
+156 896 m
+13 18 l
+E
+-34.4849 Sr
+-34.4849 Sh
+( 0) 509 575 0.5 T
+(0.2) 422 634 0.5 T
+(0.4) 340 691 0.5 T
+(0.6) 263 744 0.5 T
+(0.8) 189 795 0.5 T
+(1) 119 843 0.5 T
+(X2) 290 674 0.5 T
+0 Sr
+0 Sh
+156 896 m
+22 1 l
+153 946 m
+22 1 l
+150 996 m
+21 1 l
+146 1048 m
+21 1 l
+144 1100 m
+21 1 l
+140 1152 m
+21 1 l
+138 1206 m
+22 1 l
+E
+93.3153 Sr
+93.3153 Sh
+(4) 92 892 0.5 T
+(6) 89 942 0.5 T
+(8) 86 992 0.5 T
+(10) 82 1044 0.5 T
+(12) 80 1096 0.5 T
+(14) 76 1148 0.5 T
+(16) 74 1202 0.5 T
+(Y) 40 1045 0.5 T
+2 St
+0 Sr
+0 Sh
+545 628 m
+4 344 k
+156 896 m
+18 310 k
+1101 835 m
+20 319 h
+681 1056 m
+3 288 h
+E
+545 628 m
+389 268 k
+541 972 m
+403 234 k
+1101 835 m
+420 221 k
+1121 1154 m
+437 190 k
+E
+545 628 m
+556 207 h
+541 972 m
+580 182 h
+156 896 m
+525 160 h
+138 1206 m
+546 138 h
+E
+1 St
+0.123 0.937 0.290506 0.766456 So
+0.5 1 0.333333 0.666667 Sg
+0 Sd
+B
+1370 1094 m
+28 33 j
+28 31 j
+28 29 j
+28 27 j
+28 25 j
+28 23 j
+28 20 j
+28 19 j
+28 16 j
+28 14 j
+28 12 j
+28 9 j
+28 8 j
+28 5 j
+28 3 j
+28 2 j
+28 2 h
+28 3 h
+28 5 h
+28 8 h
+28 9 h
+28 12 h
+28 14 h
+27 16 h
+28 19 h
+28 20 h
+28 23 h
+28 25 h
+28 27 h
+28 29 h
+28 31 h
+28 33 h
+E
+1 Sd
+(X3) 1818 683 0.5 T
+90 Sr
+90 Sh
+(Y) 1209 956 0.5 T
+0 Sr
+0 Sh
+1370 807 m
+3 z
+1549 807 m
+3 z
+1728 807 m
+3 z
+1907 807 m
+3 z
+2086 807 m
+3 z
+2265 807 m
+3 z
+E
+1370 807 m
+895 x
+E
+(0.0) 1370 754 0.5 T
+(0.2) 1549 754 0.5 T
+(0.4) 1728 754 0.5 T
+(0.6) 1907 754 0.5 T
+(0.8) 2086 754 0.5 T
+(1.0) 2265 754 0.5 T
+1334 818 m
+3 w
+1334 874 m
+3 w
+1334 929 m
+3 w
+1334 984 m
+3 w
+1334 1039 m
+3 w
+1334 1094 m
+3 w
+E
+1334 818 m
+276 y
+E
+(0) 1298 818 0.5 T
+(1) 1298 874 0.5 T
+(2) 1298 929 0.5 T
+(3) 1298 984 0.5 T
+(4) 1298 1039 0.5 T
+(5) 1298 1094 0.5 T
+Z
+%%Trailer
+%%Pages: 1
+%%DocumentNeededResources: font Helvetica
+W
+%%EOF

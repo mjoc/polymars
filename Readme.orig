@@ -1,0 +1,127 @@
+PolyMARS Version 1.0
+
+******************************************************************************
+DOCUMENTATION
+
+More documentation about the polyMARS program is available on request.
+
+
+******************************************************************************
+FILES
+
+The unwrapped package contains the files 
+
+Makefile         is.polymars
+ReadMe           polymars
+f2c.h            plot.polymars
+library.help     predict.polymars
+polymarsall.S    print.polymars
+polymarsall.c    summary.polymars
+polymars.tex
+fig1.eps
+fig2.eps
+
+********************************************************************************
+MAKEFILE
+
+The Makefile can make 2 files:
+
+polymars.so  - needed for dyn.load.shared()
+polymars.o   - needed for dyn.load()
+
+Depending on your compiler you may need to change some of the options in the 
+Makefile. The compile command is either
+
+make polymars.so
+or 
+make polymars.o
+
+********************************************************************************
+S-CODE
+
+The file polymars.S contains the code for the S functions that are
+related to the polymars program. They can be loaded by sourcing polymars.S from S.
+
+*******************************************************************************
+HELPFILES
+The files polymars, predict.polymars, plot.polymars, is.polymars, summary.polymars
+and polymars.persp contain the helpfiles for the S functions. They should
+be placed in a directory .Data/.Help.  This assumes that your system reads
+the helpfiles using some form of nroff.
+
+********************************************************************************
+LOADING THE OBJECT FILES
+You may need to edit the function polymars in polymarsall.S appropriately for loading.
+This function contains the line 
+
+    dyn.load.shared("/usr/local/splus33/library/polymars/polymars.so")
+
+It may need to be changed to 
+   
+    dyn.load.shared("/where/your/files/are/polymars.so")
+
+or 
+
+    dyn.load("/where/your/files/are/polymars.o")
+
+
+********************************************************************************
+LIBRARY
+
+One possible way to install the programs is to put them in a library.
+How to do this:
+- find out where the S(Splus) code is located - if you don't know this,
+  the easiest way is to type   getenv("SHOME") inside S(Splus).
+  Let's say that this is /usr/lang/splus
+- cd to this directory, and go further down to the library directory
+  under this directory (cd /usr/lang/splus/library).
+- make a directory polymars under this directory (mkdir polymars)
+- move ALL the polymars related files into this directory
+- in /usr/lang/splus/library/polymars execute 
+  % mv library.help README
+  % make polymars.so or make polymars.o
+  % vi/emacs polymars.S as indicated above
+  % mkdir .Data
+  
+  % ls .Data    (this is in fact /usr/lang/splus/library/polymars/.Data)
+   (Should contain polymarsall.S, polymarsall.c .....and no files that are not
+   polymars related)
+  % mkdir .Data/.Help
+  % mv  polymars predict.polymars plot.polymars is.polymars .Data/.Help
+  % mv  summary.polymars polymars.persp .Data/.Help
+   (These are the helpfiles in /usr/lang/splus/library/polymars not the
+   executables in /usr/lang/splus/library/polymars/.Data)
+   This assumes that you have nroff.
+  % S (or Splus)
+  > source("polymarsall.S")
+  > help.findsum.d(".Data") ( this sets up helpfiles for window-based help) 
+  > q()
+A user wanting to use the polymars program would now, once per session,
+execute the command
+   library(polymars)
+which she/he could put in her/his .First function.
+
+********************************************************************************
+The C code contains a matrix inversion routine from lapack, all else is the work
+of the developers.
+Please note the copyright statement below.
+
+*******************************************************************************
+* (c) Charles Kooperberg and Martin O'Connor 1997                             *
+* This function is part of an implementation of the Multivariate Adaptive     *
+* Regression Splines (MARS) methodology, first proposed by J.H. Friedman(1991)*
+* The Annals of Statistics, 19, 1 - 141.                                      *
+* The program is a modified version of MARS (PolyMARS) as described in        *
+* Kooperberg, C., Bose, S. and Stone C.J.(1997) ``Polychotomous Regression'', *
+* Journal of the American Statistical Association                             *
+* 92, 117 - 127.                                                              *
+* You are free to use this program, for non-commercial purposes only,         *
+* under the condition that                                                    *
+*                          this note is not to be removed.                    *
+*                                                                             *
+* The program is not formally maintained, but we are interested in hearing    *
+* from people who have problems with it, although we may not be able to solve *
+* them.                                                                       *  
+* Email clk@fhcrc.org or martin@stat.washington.edu                           *
+*                       Charles Kooperberg and Martin O'Connor, May 20, 1997  *
+******************************************************************************/
