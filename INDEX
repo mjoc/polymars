@@ -1,6 +1,8 @@
-polymars          polymars modeling
-predict.polymars  fitted values from a polymars model
-plot.polymars     plot a polymars model
-is.polymars       is an object a object returned by polymars
-summary.polymars  summarizes a polymars model and fitting steps
-polymars.persp    used internally by plot.polymars
+is.polymars              test for polymars objects
+plot.polymars            plot.polymars - plots for polymars models
+polymars                 Multi-response Multivariate Adaptive Regression
+                         Splines
+predict.polymars         predict.polymars - fitted values from a
+                         `polymars' model
+print.polymars           print.polymars - summarizes a polymars model
+summary.polymars         summary.polymars - summarizes a polymars model

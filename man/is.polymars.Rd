@@ -3,6 +3,7 @@
 \title{
 test for polymars objects
 }
+\description{test for objects of class \code{"polymars"}.}
 \usage{
 is.polymars(object)
 }
@@ -11,12 +12,11 @@ is.polymars(object)
 the object under investigation.
 }}
 \value{
-returns TRUE if the object is a polymars model, FALSE otherwise.
+returns \code{TRUE} if the object is a polymars model, \code{FALSE} otherwise.
 }
 \seealso{
-plot.polymars, predict.polymars, summary.polymars, print.polymars
-
-
+  \code{\link{plot.polymars}}, \code{\link{predict.polymars}},
+  \code{\link{summary.polymars}}, \code{\link{print.polymars}}
 }
 % Converted by Sd2Rd version 0.2-a4.
 

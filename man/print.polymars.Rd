@@ -43,10 +43,7 @@ regression) contains the coefficients.
 print.polymars defaults to summary.polymars.
 }
 \seealso{
-plot.polymars, polymars.fun, summary.polymars, print.polymars
-
-
-
-
+  \code{\link{plot.polymars}}, \code{\link{polymars}},
+  \code{\link{summary.polymars}}
 }
 % Converted by Sd2Rd version 0.2-a4.

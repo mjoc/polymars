@@ -42,18 +42,13 @@ regression) contains the coefficients.
 \description{
 is.polymars and summary.polymars are available. print.polymars defaults to 
 summary.polymars.
-
-
 }
 \seealso{
-plot.polymars, polymars.fun, summary.polymars, print.polymars
-
-
+  \code{\link{plot.polymars}}, \code{\link{polymars}},
+  \code{\link{summary.polymars}}, \code{\link{print.polymars}}
 }
 \examples{
-fit <- polymars(mydata[,1], mydata[,c(2,3,4,5,6)])
-
-
-summary(fit)
+\dontrun{fit <- polymars(mydata[,1], mydata[,c(2,3,4,5,6)])
+summary(fit)}
 }
 % Converted by Sd2Rd version 0.2-a4.

@@ -58,25 +58,17 @@ the returned object is a matrix of fitted values, fitted according to the
 model produced by the function polymars. The number of columns in the
 returned matrix equals the number of responses in the original call to the 
 polymars function.
-
-
-
-
 }
 \description{
-
-
+  Predict from polymars objects
 }
 \seealso{
-polymars, plot.polymars, summary.polymars
+\code{\link{polymars}}, \code{\link{plot.polymars}}, \code{\link{summary.polymars}}
 }
 \examples{
-
-
+data(state)
 state.pm<-polymars(state.region,state.x77,knots=15,classify=T,additive=T)
 predict(state.pm,x=state.x77,classify=T)
-
-
 }
 % Converted by Sd2Rd version 0.2-a4.
 
