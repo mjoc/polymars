@@ -1,5 +1,5 @@
 Package: polymars
-Version: 1.0-4
+Version: 1.0-5
 Title: Polychotomous Regression based on MARS
 Author: Charles Kooperberg and Martin O'Connor 
         R port by Guido Masarotto <guido@sirio.stat.unipd.it>
